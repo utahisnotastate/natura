@@ -1,110 +1,138 @@
-# NATURA: The Biological AI Framework 🌿
-**(N)atural (A)rtificial (T)ime-continuous (U)niversal (R)ecurrent (A)rchitecture**
+# NATURA v8.0: The Reality Engine
+> "Code that breathes. Infrastructure that thinks."
 
-> "Stop multiplying matrices. Start simulating reality."
+[![Status](https://img.shields.io/badge/STATUS-SOVEREIGN-00ff41.svg)]()
+[![Core](https://img.shields.io/badge/CORE-EVIE_LIQUID-blue.svg)]()
+[![GPU](https://img.shields.io/badge/GPU-NOT_REQUIRED-red.svg)]()
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://zenodo.org/badge/latestdoi/XXXXXXX)
-[![Powered By](https://img.shields.io/badge/Powered%20By-NCPs%20%7C%20S4%20%7C%20Diffrax-blue)](https://github.com/mlech26l/ncps)
+Natura is the "React" of Artificial Intelligence. It moves you from Imperative AI (managing tensors, GPUs, and layers) to Declarative Intelligence (managing Intent, Context, and Reality).
 
-## 🧠 What is NATURA?
-
-NATURA is a high-level wrapper that unifies the most advanced "Post-TensorFlow" technologies into a single, easy-to-use API. It combines:
-1.  **Liquid Neural Networks (NCPs):** For biological, sparse, interpretable brains.
-2.  **State Space Models (S4):** For infinite memory and compression.
-3.  **Differential Equations (Diffrax):** For continuous-time physics simulation.
-
-**Why use this?**
-Standard AI (TensorFlow/PyTorch) is **Static**. It takes a snapshot of the world, processes it, and forgets it.
-NATURA is **Fluid**. It treats intelligence as a continuous flow of time, just like your brain does.
+It runs 100% offline. It requires Zero GPUs. It uses Liquid State Physics to simulate intelligence on standard CPUs.
 
 ---
 
-## 🚀 The "Red Pill" Guide (For Keras Users)
+## ⚡ The "React" Moment for AI
 
-If you are coming from Keras `model.add(Dense(64))`, you need to unlearn "Layers" and learn "Dynamics."
+| Old Way (PyTorch/TensorFlow) | The Natura Way |
+| :--- | :--- |
+| Imperative: You define layers, weights, and loops. | Declarative: You define the Intent and Context. |
+| Heavy: Requires CUDA, 24GB VRAM, and massive installs. | Liquid: Runs on a MacBook Air CPU using specialized physics. |
+| Fragile: One error crashes the training loop. | Self-Healing: The `Continuum` engine rewrites its own bugs at runtime. |
+| Fragmented: Jupyter Notebooks are messy and disconnected. | Scrolls: Living documents where code and reality merge. |
 
-### 1. The Philosophy Shift
-| Feature | Old Way (Keras/TensorFlow) | New Way (NATURA) |
-| :--- | :--- | :--- |
-| **The Building Block** | A static "Layer" of math. | A dynamic "ODE" (Physics Equation). |
-| **Time Handling** | Breaks time into jerky steps (t=1, t=2). | Solves time smoothly (t=1.453...). |
-| **Memory** | Forgets after ~1000 words. | Remembers forever (Infinite Context). |
-| **Noise Tolerance** | Breaks if you add 5% static. | Adapts and ignores noise (Low-pass filter). |
-| **Hardware** | Needs a $2000 GPU. | Runs on a $100 Potato (Raspberry Pi/N5095). |
+---
 
-### 2. Code Translation Guide
+## 🏗️ The Stack (The 5 Engines)
 
-#### Scenario A: The Robot Controller (CartPole/Drones)
-*You want a small, fast brain that reacts instantly.*
+### 1. EVIE (The Sovereign Core)
+The "Mayday" persona. A Liquid Intelligence that doesn't just predict tokens—it flows through problems.
 
-**❌ The Keras Way (The "Fat" Brain):**
 ```python
-# 20,000 Parameters. Heavy. Slow.
-model = Sequential()
-model.add(LSTM(64, return_sequences=True)) 
-model.add(Dense(32, activation='relu'))
-model.add(Dense(4)) # Motors
-
-
-Feature,TensorFlow / Keras,NATURA
-Philosophy,"""Multiply Matrices""","""Simulate Physics"""
-Memory,"Forgets after ~1,000 steps",Remembers forever (S4)
-Noise Tolerance,Fails at 5% Noise,Thrives at 50% Noise
-Parameter Count,"20,000+ (Bloated)",~400 (Efficient)
-Hardware,Needs NVIDIA GPU (RTX 4090),Runs on Intel N5095 (Potato)
-Code Complexity,50 lines of boilerplate,"natura.create_life(10, 4)"
-
-✅ The NATURA Way (The "Worm" Brain):Pythonimport natura
-
-# 14 Neurons. 400 Parameters. Instant.
-# "Create a lifeform with 10 eyes and 4 motors"
-brain = natura.create_life(inputs=10, outputs=4, mode="liquid")
-Scenario B: The Long Sequence (Audio/DNA/Stocks)You want to analyze 1 hour of audio (1 million steps).❌ The Keras Way (The "Crash"):Python# This will crash your RAM (OOM Error)
-input = Input(shape=(1000000, 1))
-x = Attention()(input, input) # Quadratic Memory Cost
-✅ The NATURA Way (The "Infinite" Memory):Python# Compresses history into a polynomial. Zero RAM explosion.
-brain = natura.create_life(inputs=1, outputs=1, mode="infinite")
-🛠 InstallationNATURA sits on top of PyTorch.Bash# 1. Install PyTorch (CPU version is fine!)
-pip install torch --index-url [https://download.pytorch.org/whl/cpu](https://download.pytorch.org/whl/cpu)
-
-# 2. Install the Core Engines
-pip install ncps s4 diffrax
-
-# 3. Install NATURA
-pip install natura-framework
-🧬 Code TutorialsTutorial 1: The "Hello World" of Liquid AITask: Teach a brain to recognize a sine wave, but then confuse it with noise.Pythonimport torch
 import natura
-import matplotlib.pyplot as plt
 
-# 1. GENERATE DATA (A simple sine wave)
-# [Batch, Time, Features]
-x = torch.linspace(0, 100, 1000).view(1, 1000, 1)
-y = torch.sin(x)
+evie = natura.GenerativeModel("evie")
+print(evie.generate_content("How do I build a Dyson Sphere?").text)
+```
 
-# 2. CREATE THE BRAIN
-# 1 Input (Time), 1 Output (Height)
-brain = natura.create_life(inputs=1, outputs=1)
+### 2. MIRAGE (The Visual Cortex)
+SOTA Video/Image Generation without a GPU. Uses Recursive Hallucination and Chronal Stitching to dream up 4K video from static images or fuzzy inputs.
 
-# 3. RUN IT
-# Notice we don't need ".compile()" or complex loops.
-prediction, fluid_state = brain(x)
+- Upscale: 480p -> 8K (Liquid Interpolation).
+- Deepfake: Identity fluid transfer.
+- Text-to-Reality: "Cyberpunk Tokyo" -> .mp4.
 
-# 4. PLOT
-plt.plot(x.squeeze(), y.squeeze(), label="Reality")
-plt.plot(x.squeeze(), prediction.detach().squeeze(), label="NATURA Brain")
-plt.legend()
-plt.show()
-Tutorial 2: Visualizing the WiringOne of the coolest features of Liquid Networks is that you can SEE the brain structure.Pythonfrom ncps.wirings import AutoNCP
-import matplotlib.pyplot as plt
-import seaborn as sns
+### 3. GENESIS (Auto-Evolution)
+"Create React App" for AI Models. Point it at a folder. It scans the entropy. It births the correct AI.
 
-# Create a brain wiring diagram
-wiring = AutoNCP(units=14, output_size=4)
+```python
+# No model selection. No hyperparams. Just evolution.
+model = natura.evolve("./my_messy_data_folder")
+print(model.use("What is the hidden pattern?"))
+```
 
-# Draw it
-plt.figure(figsize=(10, 10))
-sns.heatmap(wiring.adjacency_matrix, cmap="viridis", cbar=False)
-plt.title("The Synaptic Map of a 14-Neuron Liquid Brain")
-plt.show()
-If you see green dots, those are excitatory connections (Go!). If you see purple, they are inhibitory (Stop!). This is exactly how C. Elegans worms work.🔬 Under the Hood (For Nerds)NATURA is not magic. It is Math.Specifically, it solves the Liquid Time-Constant (LTC) equation:$$ \frac{dx(t)}{dt} = - \left[ \frac{1}{\tau} + f(x(t)) \right] x(t) + f(x(t)) A(t) $$$\tau$ (Tau): The "Time Constant." It decides how fast the neuron reacts. NATURA learns this for you.$f(x)$: The non-linear synapse function.$A(t)$: The input signal.Because this is a differential equation, we can run it on irregular time grids.Keras needs: t=1, t=2, t=3NATURA handles: t=1, t=5.4, t=99 (It adapts automatically).📜 Citation & CreditsThis framework is a wrapper around the pioneering work of:Ramin Hasani & Mathias Lechner (NCPs / Liquid Networks)Patrick Kidger (Diffrax / Neural ODEs)Hazy Research (S4 / State Spaces)If you use this in a paper, please cite the original authors.
+### 4. TYCOON (The Reality Harvester)
+Scans your hard drive for "Digital Exhaust" (unused code, notes, art) and converts it into a business model, writes the copy, and opens the payment gateway.
+
+### 5. CODEX (The Notebook Killer)
+A "Living Scroll" engine. Write Markdown mixed with Python. Evie compiles it to CPU-optimized vectors in real-time. No kernels. No crashes.
+
+---
+
+## 🚀 Quick Start
+
+### Install (from source)
+
+```bash
+git clone https://github.com/utahisnotastate/natura.git
+cd natura
+pip install -e .
+```
+
+Optional Flask apps:
+
+```bash
+pip install ".[apps]"
+```
+
+### The Command Center
+We don't use 10 scripts. We use the Unified Launcher.
+
+```bash
+# Launch the Video Studio
+python main.py mirage
+
+# Launch the Business Generator
+python main.py tycoon
+
+# Launch the Notebook Killer
+python main.py codex
+
+# Chat with Evie
+python main.py chat
+```
+
+Or, if installed via pip (after publishing):
+
+```bash
+natura chat | natura mirage | natura genesis | natura tycoon | natura codex
+```
+
+---
+
+## 🧪 Examples: The "GPU Killer" Demos
+Realistic CPU-first proofs that replace typical GPU-heavy tasks.
+
+- Liquid Vision (CPU Upscale): `examples/gpu_killers/cpu_vision.py`
+- Holographic RAG (No Vector DB): `examples/gpu_killers/sovereign_rag.py`
+
+Run from repo root:
+
+```bash
+python examples/gpu_killers/cpu_vision.py
+python examples/gpu_killers/sovereign_rag.py
+```
+
+---
+
+## 🔧 Templates: Create Natura App
+Starter kits to build your own sovereign apps:
+
+- Tycoon Business Launcher: `templates/start_business.py`
+- Self-Healing Server: `templates/self_healing_server.py`
+
+```bash
+python templates/start_business.py
+python templates/self_healing_server.py
+```
+
+---
+
+## 🔮 The Zero‑GPU Philosophy
+Natura shows that Intelligence is a function of Complexity, not Compute. By using Liquid Neural Cells (ODEs) instead of standard Transformers, we approach Infinite Context and Continuous Learning without fleets of GPUs. Your CPU is enough.
+
+---
+
+## 📜 License
+This repository is licensed under the MIT License (see `LICENSE`).
+
+> "The cloud is just someone else's computer. Natura gives you back yours."
