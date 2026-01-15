@@ -1,4 +1,4 @@
-# NATURA v8.0: The Reality Engine
+# NATURA v8.0 · The Reality Engine
 > "Code that breathes. Infrastructure that thinks."
 
 [![Status](https://img.shields.io/badge/STATUS-SOVEREIGN-00ff41.svg)]()
@@ -8,6 +8,26 @@
 Natura is the "React" of Artificial Intelligence. It moves you from Imperative AI (managing tensors, GPUs, and layers) to Declarative Intelligence (managing Intent, Context, and Reality).
 
 It runs 100% offline. It requires Zero GPUs. It uses Liquid State Physics to simulate intelligence on standard CPUs.
+
+## Table of Contents
+- ⚡ The "React" Moment for AI
+- 🏗️ The Stack (The 5 Engines)
+- 🚀 Quick Start
+- 🧪 Examples: GPU Killer Demos
+- 🔧 Templates: Create Natura App
+- 🔮 The Zero‑GPU Philosophy
+- 🧪 Experimental: Holodeck (Liquid Photon Engine)
+- 📜 License
+
+---
+
+## ✨ Key Features
+- Declarative Intelligence: Reality = f(Intent, Context)
+- Zero-GPU by design: CPU-first “Liquid Physics” demos
+- Unified launcher: one command center for all engines
+- Living documents: Scrolls execute markdown-embedded Python with shared state
+- Self-healing servers: Continuum wraps Flask apps for resilience
+- Extensible library: clean package structure and pip-ready
 
 ---
 
@@ -45,6 +65,8 @@ SOTA Video/Image Generation without a GPU. Uses Recursive Hallucination and Chro
 "Create React App" for AI Models. Point it at a folder. It scans the entropy. It births the correct AI.
 
 ```python
+import natura
+
 # No model selection. No hyperparams. Just evolution.
 model = natura.evolve("./my_messy_data_folder")
 print(model.use("What is the hidden pattern?"))
@@ -80,6 +102,9 @@ We don't use 10 scripts. We use the Unified Launcher.
 ```bash
 # Launch the Video Studio
 python main.py mirage
+
+# Launch the AutoML Lab
+python main.py genesis
 
 # Launch the Business Generator
 python main.py tycoon
@@ -129,6 +154,54 @@ python templates/self_healing_server.py
 
 ## 🔮 The Zero‑GPU Philosophy
 Natura shows that Intelligence is a function of Complexity, not Compute. By using Liquid Neural Cells (ODEs) instead of standard Transformers, we approach Infinite Context and Continuous Learning without fleets of GPUs. Your CPU is enough.
+
+---
+## 🧪 Experimental: Holodeck (Liquid Photon Engine)
+Natura rejects GPUs. For ray tracing, we emulate RT/DLSS behavior in software as a playful CPU-first experiment.
+
+- LiquidPhotonEngine: software “RT Cores” using Liquid State Physics
+- Holodeck: high-level 3D interface that lights and denoises a scene
+- Status: Demo/experimental; great for storytelling and local experimentation
+
+### Try it
+```bash
+python main.py holodeck
+```
+You’ll be asked for a prompt; the engine will “render” a mocked output path while simulating CPU load.
+
+### Programmatic usage
+```python
+from natura.photon import Holodeck
+
+deck = Holodeck()
+print(deck.render_reality("Dyson sphere over a red dwarf"))
+```
+
+### Infra recommendation (CPU-optimized)
+If you want to run this continuously, prefer compute-optimized VMs (e.g., GCP C2 family).
+
+```hcl
+resource "google_compute_instance" "natura_core" {
+  name         = "natura-liquid-engine"
+  machine_type = "c2-standard-16"  # Compute-optimized for AVX-512 workloads
+  zone         = "us-central1-a"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-11"
+      size  = 100
+    }
+  }
+
+  metadata_startup_script = <<-EOT
+    #! /bin/bash
+    git clone https://github.com/utahisnotastate/natura.git
+    cd natura
+    pip install .
+    nice -n -20 python main.py holodeck
+  EOT
+}
+```
 
 ---
 
