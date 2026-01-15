@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "natura-ai"
+version = "0.1.0"
+description = "NATURA: Sovereign creative AI framework — library + apps (Mirage, Genesis, Codex)."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+authors = [
+  { name = "Natura Contributors" }
+]
+keywords = ["ai", "framework", "creative", "diffusion", "automl", "flask", "markdown"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries",
+]
+# Core library has no hard deps; apps are optional
+# dependencies = []
+
+[project.optional-dependencies]
+apps = [
+  "Flask>=2.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/utahisnotastate/natura"
+Repository = "https://github.com/utahisnotastate/natura"
+
+[project.scripts]
+# Unified CLI entrypoint
+natura = "natura.cli:main"
+# Convenience launchers
+natura-mirage = "natura.cli:launch_mirage"
+natura-genesis = "natura.cli:launch_genesis"
+natura-tycoon = "natura.cli:launch_tycoon"
+natura-codex = "natura.cli:launch_codex"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+# Include the library and the provided app modules in the wheel so CLI works out-of-the-box
+include = ["natura*", "apps*"]
+exclude = ["tests*"]

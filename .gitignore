@@ -8,3 +8,11 @@ temp_*
 *.mp4
 *.png
 *.exe
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# macOS
+.DS_Store
