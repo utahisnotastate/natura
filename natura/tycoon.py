@@ -3,6 +3,7 @@ NATURA TYCOON: BUSINESS LOGIC PROTOCOL
 """
 from dataclasses import dataclass
 import os
+from typing import Optional, List
 
 
 @dataclass

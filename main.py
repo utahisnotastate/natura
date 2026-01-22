@@ -47,9 +47,21 @@ def launch_codex():
     codex_reader.app.run(port=9000)
 
 
+def launch_holodeck():
+    """Launch the 3D Ray Tracing Studio"""
+    print(">> ENGAGING LIQUID PHOTON ENGINE...")
+    print(">> WARNING: NO GPU DETECTED. OPTIMIZING FOR C2 INSTANCE...")
+    from natura.photon import Holodeck
+
+    deck = Holodeck()
+    prompt = input("ENTER REALITY PROMPT: ")
+    output = deck.render_reality(prompt)
+    print(f"RENDER COMPLETE: {output}")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Natura Reality Engine")
-    parser.add_argument("mode", choices=["chat", "mirage", "genesis", "tycoon", "codex"], help="Which interface to launch")
+    parser.add_argument("mode", choices=["chat", "mirage", "genesis", "tycoon", "codex","holodeck"], help="Which interface to launch")
 
     args = parser.parse_args()
 
@@ -61,5 +73,7 @@ if __name__ == "__main__":
         launch_genesis()
     elif args.mode == "tycoon":
         launch_tycoon()
+    elif args.mode == "holodeck":
+        launch_holodeck()
     elif args.mode == "codex":
         launch_codex()
